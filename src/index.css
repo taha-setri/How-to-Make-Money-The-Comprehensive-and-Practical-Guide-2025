@@ -1,0 +1,331 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Luxury Gold & Emerald Shimmer Typography */
+  .text-luxury-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 35%, #fde68a 70%, #34d399 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 6s ease-in-out infinite alternate;
+  }
+
+  .text-gold-luxury {
+    background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #fef3c7 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 5s ease-in-out infinite;
+  }
+
+  .text-emerald-luxury {
+    background: linear-gradient(135deg, #6ee7b7 0%, #10b981 50%, #34d399 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 6s ease-in-out infinite;
+  }
+
+  /* Multi-Color & Distinct Theme Typography Gradients */
+  .text-multi-gradient {
+    background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 25%, #34d399 50%, #fbbf24 75%, #f43f5e 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 7s ease-in-out infinite alternate;
+  }
+
+  .text-sapphire-luxury {
+    background: linear-gradient(135deg, #7dd3fc 0%, #0284c7 50%, #38bdf8 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 5s ease-in-out infinite;
+  }
+
+  .text-violet-luxury {
+    background: linear-gradient(135deg, #d8b4fe 0%, #9333ea 50%, #f472b6 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 5s ease-in-out infinite;
+  }
+
+  .text-amber-luxury {
+    background: linear-gradient(135deg, #fde68a 0%, #ea580c 50%, #f59e0b 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 5s ease-in-out infinite;
+  }
+
+  .text-ruby-luxury {
+    background: linear-gradient(135deg, #fda4af 0%, #e11d48 50%, #fb7185 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: luxuryTextShine 5s ease-in-out infinite;
+  }
+
+  /* Opulent Aura & Ambient Glows for all Themes */
+  .glow-luxury-multi {
+    box-shadow: 0 0 50px -8px rgba(139, 92, 246, 0.35), 0 0 30px -5px rgba(6, 182, 212, 0.25);
+  }
+
+  .glow-luxury-emerald {
+    box-shadow: 0 0 45px -10px rgba(16, 185, 129, 0.35);
+  }
+
+  .glow-luxury-gold {
+    box-shadow: 0 0 45px -10px rgba(245, 158, 11, 0.3);
+  }
+
+  .glow-luxury-sapphire {
+    box-shadow: 0 0 45px -10px rgba(14, 165, 233, 0.35);
+  }
+
+  .glow-luxury-violet {
+    box-shadow: 0 0 45px -10px rgba(168, 85, 247, 0.35);
+  }
+
+  .glow-luxury-amber {
+    box-shadow: 0 0 45px -10px rgba(245, 158, 11, 0.35);
+  }
+
+  .glow-luxury-ruby {
+    box-shadow: 0 0 45px -10px rgba(244, 63, 94, 0.35);
+  }
+
+  .border-luxury-glass {
+    border: 1px solid rgba(52, 211, 153, 0.25);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(2, 6, 23, 0.95) 100%);
+    backdrop-filter: blur(16px);
+  }
+
+  /* Animated Luxury Mesh Gradient Background */
+  .animated-mesh-canvas {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .animated-mesh-bg {
+    position: absolute;
+    inset: -30%;
+    background-image: 
+      radial-gradient(at 15% 20%, rgba(139, 92, 246, 0.16) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(6, 182, 212, 0.16) 0px, transparent 50%),
+      radial-gradient(at 50% 65%, rgba(245, 158, 11, 0.14) 0px, transparent 60%),
+      radial-gradient(at 20% 85%, rgba(16, 185, 129, 0.14) 0px, transparent 55%),
+      radial-gradient(at 80% 80%, rgba(244, 63, 94, 0.12) 0px, transparent 50%);
+    filter: blur(50px);
+    animation: luxuryMeshDrift 28s ease-in-out infinite alternate;
+    transform-origin: center;
+    opacity: 0.9;
+    transition: background-image 3s cubic-bezier(0.4, 0, 0.2, 1), opacity 2s ease-in-out;
+  }
+
+  [data-theme="multi"] .animated-mesh-bg {
+    background-image: 
+      radial-gradient(at 15% 20%, rgba(139, 92, 246, 0.18) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(6, 182, 212, 0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 65%, rgba(245, 158, 11, 0.16) 0px, transparent 60%),
+      radial-gradient(at 20% 85%, rgba(16, 185, 129, 0.16) 0px, transparent 55%),
+      radial-gradient(at 80% 80%, rgba(244, 63, 94, 0.14) 0px, transparent 50%);
+  }
+
+  [data-theme="sapphire"] .animated-mesh-bg {
+    background-image: 
+      radial-gradient(at 15% 20%, rgba(14, 165, 233, 0.18) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(6, 182, 212, 0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 65%, rgba(59, 130, 246, 0.14) 0px, transparent 60%),
+      radial-gradient(at 20% 85%, rgba(2, 132, 199, 0.16) 0px, transparent 55%),
+      radial-gradient(at 80% 80%, rgba(56, 189, 248, 0.12) 0px, transparent 50%);
+  }
+
+  [data-theme="violet"] .animated-mesh-bg {
+    background-image: 
+      radial-gradient(at 15% 20%, rgba(168, 85, 247, 0.18) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(217, 70, 239, 0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 65%, rgba(139, 92, 246, 0.15) 0px, transparent 60%),
+      radial-gradient(at 20% 85%, rgba(236, 72, 153, 0.14) 0px, transparent 55%),
+      radial-gradient(at 80% 80%, rgba(192, 132, 252, 0.12) 0px, transparent 50%);
+  }
+
+  [data-theme="amber"] .animated-mesh-bg {
+    background-image: 
+      radial-gradient(at 15% 20%, rgba(245, 158, 11, 0.18) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(249, 115, 22, 0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 65%, rgba(251, 191, 36, 0.15) 0px, transparent 60%),
+      radial-gradient(at 20% 85%, rgba(234, 88, 12, 0.14) 0px, transparent 55%),
+      radial-gradient(at 80% 80%, rgba(253, 224, 71, 0.12) 0px, transparent 50%);
+  }
+
+  [data-theme="ruby"] .animated-mesh-bg {
+    background-image: 
+      radial-gradient(at 15% 20%, rgba(244, 63, 94, 0.18) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(225, 29, 72, 0.18) 0px, transparent 50%),
+      radial-gradient(at 50% 65%, rgba(251, 113, 133, 0.15) 0px, transparent 60%),
+      radial-gradient(at 20% 85%, rgba(244, 63, 94, 0.14) 0px, transparent 55%),
+      radial-gradient(at 80% 80%, rgba(253, 164, 175, 0.12) 0px, transparent 50%);
+  }
+
+  [data-theme="emerald"] .animated-mesh-bg {
+    background-image: 
+      radial-gradient(at 15% 20%, rgba(16, 185, 129, 0.16) 0px, transparent 55%),
+      radial-gradient(at 85% 25%, rgba(13, 148, 136, 0.14) 0px, transparent 50%),
+      radial-gradient(at 50% 65%, rgba(245, 158, 11, 0.10) 0px, transparent 60%),
+      radial-gradient(at 20% 85%, rgba(5, 150, 105, 0.14) 0px, transparent 55%),
+      radial-gradient(at 80% 80%, rgba(6, 182, 212, 0.10) 0px, transparent 50%);
+  }
+
+  .matrix-scanline {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0),
+      rgba(255,255,255,0) 50%,
+      rgba(16, 185, 129, 0.04) 50%,
+      rgba(16, 185, 129, 0.04)
+    );
+    background-size: 100% 4px;
+  }
+}
+
+@keyframes luxuryMeshDrift {
+  0% {
+    transform: scale(1) translate(0%, 0%) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.08) translate(3%, 4%) rotate(1.5deg);
+  }
+  66% {
+    transform: scale(0.96) translate(-4%, 2%) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1.04) translate(2%, -3%) rotate(1deg);
+  }
+}
+
+@keyframes luxuryTextShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes luxuryFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes luxuryPulseSlow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes luxurySheen {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  25%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+@keyframes borderRotate {
+  0% {
+    --border-angle: 0deg;
+  }
+  100% {
+    --border-angle: 360deg;
+  }
+}
+
+@keyframes radarWave {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes neonBreath {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2), 0 0 30px rgba(16, 185, 129, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.45), 0 0 50px rgba(52, 211, 153, 0.25);
+  }
+}
+
+@keyframes goldBreath {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2), 0 0 30px rgba(245, 158, 11, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.45), 0 0 50px rgba(251, 191, 36, 0.25);
+  }
+}
+
+.animate-luxury-float {
+  animation: luxuryFloat 5s ease-in-out infinite;
+}
+
+.animate-luxury-pulse {
+  animation: luxuryPulseSlow 7s ease-in-out infinite;
+}
+
+.animate-luxury-sheen {
+  animation: luxurySheen 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-neon-breath {
+  animation: neonBreath 4s ease-in-out infinite;
+}
+
+.animate-gold-breath {
+  animation: goldBreath 4.5s ease-in-out infinite;
+}
+
+.animate-radar-wave {
+  animation: radarWave 2.8s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+/* Modern World-Class Glassmorphism & Micro-borders */
+.card-glass-modern {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(2, 6, 23, 0.9) 100%);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(16, 185, 129, 0.15);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-glass-modern:hover {
+  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 35px -5px rgba(16, 185, 129, 0.3);
+  transform: translateY(-4px);
+}

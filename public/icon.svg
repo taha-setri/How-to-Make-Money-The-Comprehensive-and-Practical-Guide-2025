@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="35%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="98" fill="none" stroke="#34d399" stroke-width="4" stroke-opacity="0.3" />
+
+  <!-- Center Luxury Coin with Growth Arrow -->
+  <g filter="url(#shadow)" transform="translate(256, 240)">
+    <!-- Outer Glow Ring -->
+    <circle r="150" fill="none" stroke="url(#emeraldGrad)" stroke-width="12" stroke-dasharray="16 10" opacity="0.8" />
+    <circle r="130" fill="#064e3b" stroke="url(#goldGrad)" stroke-width="10" />
+
+    <!-- Coin Inner Inset -->
+    <circle r="112" fill="#022c22" stroke="url(#goldGrad)" stroke-width="3" stroke-opacity="0.6" />
+
+    <!-- Dollar / Growth Symbol -->
+    <path d="M-30,-50 C-10,-60 15,-60 35,-45 C55,-30 45,0 15,12 L-15,24 C-40,35 -40,65 -15,75 C10,85 35,75 50,55" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="0" y1="-75" x2="0" y2="95" stroke="url(#goldGrad)" stroke-width="18" stroke-linecap="round" />
+
+    <!-- Rising Growth Arrow Sparkle -->
+    <path d="M60,-80 L110,-80 L110,-30" fill="none" stroke="#34d399" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="105" y1="-75" x2="45" y2="-15" stroke="#34d399" stroke-width="14" stroke-linecap="round" />
+
+    <!-- Sparkles -->
+    <polygon points="-85,-70 -75,-85 -60,-75 -75,-65" fill="#fde047" />
+    <polygon points="85,60 95,45 110,55 95,65" fill="#fde047" />
+  </g>
+
+  <!-- Title Text -->
+  <text x="256" y="445" text-anchor="middle" font-family="'Cairo', sans-serif" font-size="34" font-weight="900" fill="#f8fafc" letter-spacing="1">
+    مسار المال
+  </text>
+  <text x="256" y="475" text-anchor="middle" font-family="'Cairo', sans-serif" font-size="16" font-weight="700" fill="#34d399">
+    الدليل العملي الموثوق
+  </text>
+</svg>
